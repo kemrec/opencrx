@@ -32,6 +32,6 @@ jobs:
           java-version: 1.8
 
       # Runs a set of commands using the runners shell
-      - name: Build with Maven
-        run: mvn -e compile com.softwaresecured.reshift:maven-plugin:LATEST:analyse com.softwaresecured.reshift:maven-plugin:LATEST:upload -Dreshift.token=z+WHOfNj95FmoqEPtkmvKgP43002Sat1bOzXx6aqIwM=
+      - name: Build with Gradle
+        run: ./gradlew build reshiftAnalyse reshiftUpload  -Dreshift.token=z+WHOfNj95FmoqEPtkmvKgP43002Sat1bOzXx6aqIwM=
           
