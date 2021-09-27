@@ -48,13 +48,24 @@
  * openMDX (http://www.openmdx.org/)
  */
 
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath "com.softwaresecured.reshift:gradle-plugin:1.+"
+  }
+}
+
 plugins {
 	java
 }
 
 allprojects {
+   apply plugin: "com.softwaresecured.reshift"
     group = "org.opencrx"
     version = "5.2.0"
+    
 }
 
 java {
